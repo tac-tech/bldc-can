@@ -13,9 +13,9 @@ Install instructions
 2. run make
 3. cd build
 4. run test programs:
-⋅⋅* ./testspeed
-⋅⋅* ./testduty
-⋅⋅* ./bldclog can0 1.log 6
+	- ./testspeed
+	- ./testduty
+	- ./bldclog can0 1.log 6
 
 Clean build folder
 ----------------------------------------
@@ -24,5 +24,5 @@ Clean build folder
 
 Run or debug from VS Code
 ----------------------------------------
-Go to testspeed.c or testduty.c and press <F5> 
+Go to testspeed.c or testduty.c and press F5 key
 
