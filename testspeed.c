@@ -21,7 +21,6 @@ int main(int argc, char **argv)
   struct sockaddr_can can_addr;
   struct can_frame frame1;
 
-  int32_t erpm;
   int nbytes;
 
   if (argc <= 1 || argc >= 3)

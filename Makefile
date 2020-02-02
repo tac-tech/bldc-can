@@ -7,7 +7,7 @@ $(BUILD_DIR)/%.o: %.c bldc.h
 	mkdir -p $(dir $@)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-all : $(BUILD_DIR)/bldclog $(BUILD_DIR)/bldccantest $(BUILD_DIR)/bldcconfigure $(BUILD_DIR)/speedtest
+all : $(BUILD_DIR)/bldclog $(BUILD_DIR)/bldccantest $(BUILD_DIR)/bldcconfigure $(BUILD_DIR)/testspeed $(BUILD_DIR)/testduty
 
 $(BUILD_DIR)/bldclog: $(BUILD_DIR)/bldclog.o $(BUILD_DIR)/bldc.o
 	$(CC) -o $@ $^ $(CFLAGS)
@@ -18,7 +18,10 @@ $(BUILD_DIR)/bldccantest: $(BUILD_DIR)/bldccantest.o $(BUILD_DIR)/bldc.o
 $(BUILD_DIR)/bldcconfigure: $(BUILD_DIR)/bldcconfigure.o $(BUILD_DIR)/bldc.o
 	$(CC) -o $@ $^ $(CFLAGS)
 
-$(BUILD_DIR)/speedtest: $(BUILD_DIR)/speedtest.o $(BUILD_DIR)/bldc.o
+$(BUILD_DIR)/testspeed: $(BUILD_DIR)/testspeed.o $(BUILD_DIR)/bldc.o
+	$(CC) -o $@ $^ $(CFLAGS)
+
+$(BUILD_DIR)/testduty: $(BUILD_DIR)/testduty.o $(BUILD_DIR)/bldc.o
 	$(CC) -o $@ $^ $(CFLAGS)
 
 .PHONY: clean
