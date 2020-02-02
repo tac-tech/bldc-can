@@ -13,10 +13,9 @@ Install instructions
 2. run make
 3. cd build
 4. run test programs:
-	./testspeed
-	./testduty
-	./bldclog can0 1.log 6
-5. 
+⋅⋅* ./testspeed
+⋅⋅* ./testduty
+⋅⋅* ./bldclog can0 1.log 6
 
 Clean build folder
 ----------------------------------------
